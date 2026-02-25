@@ -1,0 +1,5 @@
+nome = input("Digite seu nome: ")
+idade = int(input("Digite sua idade: "))
+altura = float(input("Digite sua altura em metros (ex: 1.75): "))
+print(f"{nome}, você tem {idade} anos e {altura} metros de altura.")
+print("{}, você tem {} anos e {} metros de altura.".format(nome, idade, altura))
