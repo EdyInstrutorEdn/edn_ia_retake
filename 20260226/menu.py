@@ -1,6 +1,7 @@
 import os
 import maioridade
 import escolaridade
+import media
 
 def Opcao1():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -11,6 +12,16 @@ def Opcao1():
     result = maioridade.Maioridade(classification)
     print("")
     print(f"Sua faixa etária é: {result}")
+    print("")
+    input("Pressione Enter para continuar...")
+    
+def Opcao3():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("=========================")
+    print("Cálculo da média")
+    print("=========================")
+    resultado = media.calcularmedia()
+    print(f'A média final é {resultado:.2f}')
     print("")
     input("Pressione Enter para continuar...")
 
@@ -31,6 +42,7 @@ while True:
     print("===== Menu Principal =====")
     print("1. Mairoridade")
     print("2. Escolaridade")
+    print("3. Média")
     print("0. Exit")
     print("==========================")
     choice = input("Escolha uma opção: ")
@@ -48,6 +60,8 @@ while True:
         Opcao1()
     elif choice == 2:
         Opcao2()
+    if choice == 3:
+        Opcao3()
     elif choice == 0:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Obrigado por usar o programa.")
