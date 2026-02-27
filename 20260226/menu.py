@@ -107,12 +107,16 @@ while True:
 
     if choice == 1:
         Opcao1()
+        continue
     elif choice == 4:
         Opcao4()
+        continue
     elif choice == 2:
         Opcao2()
+        continue
     if choice == 3:
         Opcao3()
+        continue
     elif choice == 0:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Obrigado por usar o programa.")
