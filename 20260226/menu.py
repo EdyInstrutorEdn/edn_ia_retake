@@ -86,12 +86,11 @@ def Opcao4():
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')
     print("===== Menu Principal =====")
-    print("1. Mairoridade")
+    print("0. Exit")
+    print("1. Maioridade")
     print("2. Escolaridade")
     print("3. Média")
     print("4. Nível de Experiência")
-
-    print("0. Exit")
     print("==========================")
     choice = input("Escolha uma opção: ")
     
