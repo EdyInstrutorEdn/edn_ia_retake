@@ -1,5 +1,7 @@
 import os
 import maioridade
+import escolaridade
+import media
 
 
 def Opcao1():
@@ -21,6 +23,28 @@ def Opcao1():
     except ValueError:
         print("Por favor, digite apenas números válidos.")
 
+    print("")
+    input("Pressione Enter para continuar...")
+    
+def Opcao3():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("=========================")
+    print("Cálculo da média")
+    print("=========================")
+    resultado = media.calcularmedia()
+    print(f'A média final é {resultado:.2f}')
+    print("")
+    input("Pressione Enter para continuar...")
+
+def Opcao2():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("============================")
+    print("Classificação por escolaridade")
+    print("============================")
+    classification = int(input("Digite a sua idade: "))
+    result = escolaridade.Escolaridade(classification)
+    print("")
+    print(f"Sua escolaridade ideal é: {result}")
     print("")
     input("Pressione Enter para continuar...")
 
@@ -63,12 +87,15 @@ def Opcao4():
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')
     print("===== Menu Principal =====")
-    print("1. Maioridade")
+    print("1. Mairoridade")
+    print("2. Escolaridade")
+    print("3. Média")
     print("4. Nível de Experiência")
+
     print("0. Exit")
     print("==========================")
-
-    choice = input("Enter your choice: ")
+    choice = input("Escolha uma opção: ")
+    
 
     try:
         choice = int(choice)
@@ -82,6 +109,10 @@ while True:
         Opcao1()
     elif choice == 4:
         Opcao4()
+    elif choice == 2:
+        Opcao2()
+    if choice == 3:
+        Opcao3()
     elif choice == 0:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Obrigado por usar o programa.")
