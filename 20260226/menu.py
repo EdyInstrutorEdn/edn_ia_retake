@@ -25,16 +25,6 @@ def Opcao1():
 
     print("")
     input("Pressione Enter para continuar...")
-    
-def Opcao3():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print("=========================")
-    print("Cálculo da média")
-    print("=========================")
-    resultado = media.calcularmedia()
-    print(f'A média final é {resultado:.2f}')
-    print("")
-    input("Pressione Enter para continuar...")
 
 def Opcao2():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -47,7 +37,16 @@ def Opcao2():
     print(f"Sua escolaridade ideal é: {result}")
     print("")
     input("Pressione Enter para continuar...")
-
+    
+def Opcao3():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("=========================")
+    print("Cálculo da média")
+    print("=========================")
+    resultado = media.calcularmedia()
+    print(f'A média final é {resultado:.2f}')
+    print("")
+    input("Pressione Enter para continuar...")
 
 def Opcao4():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -105,22 +104,22 @@ while True:
         input("Pressione Enter para continuar...")
         continue
 
-    if choice == 1:
+    if choice == 0:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("Obrigado por usar o programa.")
+        break
+    elif choice == 1:
         Opcao1()
-        continue
-    elif choice == 4:
-        Opcao4()
         continue
     elif choice == 2:
         Opcao2()
         continue
-    if choice == 3:
+    elif choice == 3:
         Opcao3()
         continue
-    elif choice == 0:
-        os.system('cls' if os.name == 'nt' else 'clear')
-        print("Obrigado por usar o programa.")
-        break
+    elif choice == 4:
+        Opcao4()
+        continue
     else:
         print("Opção inválida. Por favor, tente novamente.")
         print("")
